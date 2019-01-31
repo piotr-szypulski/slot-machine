@@ -1,0 +1,17 @@
+# compiled output
+/dist
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# System Files
+.DS_Store
+Thumbs.db
+
+package-lock.json

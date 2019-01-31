@@ -1,0 +1,20 @@
+{
+  "offset": 300,
+  "messages": [
+    "Press the button to spin!",
+    "BIG WIN!",
+    "Small win ;)",
+    "No win :("
+  ],
+  "minSpinNumber": 10,
+  "numberOfSlots": 3,
+  "speed": 50,
+  "symbols": [
+    "Symbol_0",
+    "Symbol_1",
+    "Symbol_2",
+    "Symbol_3",
+    "Symbol_4",
+    "Symbol_5"
+  ]
+}

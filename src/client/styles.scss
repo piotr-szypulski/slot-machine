@@ -1,0 +1,79 @@
+@import '../../node_modules/sass-prefix-mixins/scss/prefixes';
+
+$dark-color: #bbb;
+$light-color: #e6e6e6;
+$blue-color: #0c1f2b;
+
+$tablet-rwd: 768px;
+$mobile-rwd: 1260px;
+
+@mixin center-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin on-tablet {
+  @media only screen and (max-width: $tablet-rwd) { @content; }
+}
+
+@mixin on-mobile {
+  @media only screen and (max-width: $mobile-rwd) { @content; }
+}
+
+.root {
+  @include vp-flexbox;
+  @include vp-flex-direction(column);
+  @include vp-justify-content(center);
+  background-color: $dark-color;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slotgame {
+  @include vp-align-items(center);
+  @include vp-flexbox;
+  @include vp-flex-direction(column);
+  background-color: $light-color;
+  height: 60vh;
+  padding: 5vw;
+  width: 90vw;
+
+  &__button {
+    @include on-tablet {
+      height: 20vh;
+      width: 20vw;
+    }
+
+    @include center-image;
+    background-color: transparent;
+    background-image: url('../assets/button.png');
+    border: 0;
+    cursor: pointer;
+    height: 40vh;
+    width: 40vw;
+  }
+
+  &__message {
+    color: $blue-color;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+
+  }
+
+  &__slot {
+    @include center-image;
+    height: 100%;
+    width: 33.3%;
+  }
+
+  &__slots {
+    @include vp-flexbox;
+    height: 100%;
+    margin: 5vw;
+    width: calc(100% - 10vw);
+  }
+}
+
+
